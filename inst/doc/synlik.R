@@ -1,10 +1,8 @@
-
 ## ----setup, include=FALSE------------------------------------------------
 library(knitr)
 opts_chunk$set(out.extra='style="display:block; margin: auto"', fig.align="center", tidy=FALSE)
 
-
-## ----ricker_constr, results='hide'---------------------------------------
+## ----ricker_co0nstr, results='hide'--------------------------------------
 library(synlik)
 ricker_sl <- synlik(simulator = rickerSimul,
                     summaries = rickerStats,
@@ -12,39 +10,31 @@ ricker_sl <- synlik(simulator = rickerSimul,
                     extraArgs = list("nObs" = 50, "nBurn" = 50)
 )
 
-
 ## ----ricker_simul--------------------------------------------------------
 ricker_sl@data <- simulate(ricker_sl, nsim = 1, seed = 54)
-
 
 ## ----ricker_plot---------------------------------------------------------
 ricker_sl@plotFun <- function(input, ...) plot(drop(input), type = 'l', ylab = "Pop", xlab = "Time", ...)
 plot(ricker_sl)
 
-
 ## ----ricker_simul_stats--------------------------------------------------
 tmp <- simulate(ricker_sl, nsim = 10)
 dim(tmp)
 
-
 ## ------------------------------------------------------------------------
 ricker_sl@extraArgs$obsData <- ricker_sl@data
-
 
 ## ------------------------------------------------------------------------
 tmp <- simulate(ricker_sl, nsim = 2, stats = TRUE)
 tmp
 
-
-## ----, results='hide'----------------------------------------------------
+## ---- results='hide'-----------------------------------------------------
 checkNorm(ricker_sl)
-
 
 ## ----ricker_slik---------------------------------------------------------
 slik(ricker_sl, 
      param  = c(logR = 3.8, logSigma = log(0.3), logPhi = log(10)),
      nsim   = 1e3)
-
 
 ## ----ricker_slice--------------------------------------------------------
 slice(object = ricker_sl, 
@@ -53,7 +43,6 @@ slice(object = ricker_sl,
                     "logSigma" = seq(-2, -0.5, by = 0.02)), 
       param = c(logR = 3.8, logSigma = log(0.3), logPhi = log(10)), 
       nsim = 1000)
-
 
 ## ----ricker_slice_2D-----------------------------------------------------
 slice(object = ricker_sl, 
@@ -65,7 +54,6 @@ slice(object = ricker_sl,
       multicore = TRUE,
       ncores = 2)
 
-
 ## ----ricker_smcmc--------------------------------------------------------
 ricker_sl <- smcmc(ricker_sl, 
                    initPar = c(3.2, -1, 2.6),
@@ -75,10 +63,8 @@ ricker_sl <- smcmc(ricker_sl,
                    propCov = diag(c(0.1, 0.1, 0.1))^2, 
                    nsim = 500)
 
-
 ## ----ricker_continue-----------------------------------------------------
 ricker_sl <- continue(ricker_sl, niter = 10)
-
 
 ## ----ricker_plot_smcmc---------------------------------------------------
 data(ricker_smcmc)
@@ -86,7 +72,6 @@ addline1 <- function(parNam, ...) abline(h = ricker_smcmc@param[parNam], lwd = 2
 addline2 <- function(parNam, ...) abline(v = ricker_smcmc@param[parNam], lwd = 2, lty = 2, col = 3)
 
 plot(ricker_smcmc, addPlot1 = "addline1", addPlot2 = "addline2")
-
 
 ## ----blow_constr---------------------------------------------------------
 blow_sl <- synlik(simulator = blowSimul,
@@ -99,11 +84,9 @@ blow_sl <- synlik(simulator = blowSimul,
                            }
 )
 
-
 ## ----blow_simul----------------------------------------------------------
 blow_sl@data <- simulate(blow_sl, seed = 84)
 blow_sl@extraArgs$obsData <- blow_sl@data
-
 
 ## ----blow_smcmc----------------------------------------------------------
 blow_sl <- smcmc(blow_sl, 
@@ -122,19 +105,16 @@ blow_sl <- smcmc(blow_sl,
                  multicore = FALSE
 )
 
-
 ## ----blow_plot-----------------------------------------------------------
 data(blow_smcmc)
 tmpTrans <- rep("exp", 6)
 names(tmpTrans) <- names(blow_smcmc@param)
 plot(blow_smcmc, trans = tmpTrans)
 
-
 ## ----bf1-----------------------------------------------------------------
 data(bf1)
 blow_sl@data <- bf1$pop
 blow_sl@extraArgs$obsData <- blow_sl@data
-
 
 ## ----stableSimul---------------------------------------------------------
 stableSimul <- function(param, nsim, extraArgs, ...)
@@ -154,7 +134,6 @@ stableSimul <- function(param, nsim, extraArgs, ...)
   return( matrix(output, nsim, nObs) )
 }
 
-
 ## ----stableStats---------------------------------------------------------
 stableStats <- function(x, extraArgs, ...){  
   
@@ -165,7 +144,6 @@ stableStats <- function(x, extraArgs, ...){
   unname(X0)
 }
 
-
 ## ----stable_constr-------------------------------------------------------
 stable_sl <- synlik( simulator = stableSimul,
                      summaries = stableStats,
@@ -175,7 +153,6 @@ stable_sl <- synlik( simulator = stableSimul,
                      )
 stable_sl@data <- simulate(stable_sl, seed = 67)
 plot(stable_sl)
-
 
 ## ----stable_smcmc--------------------------------------------------------
 stable_sl <- smcmc(stable_sl, 
@@ -191,7 +168,6 @@ stable_sl <- smcmc(stable_sl,
                    nsim = 200)
 # plot(stable_sl, trans = c("alpha" = "exp", "gamma" = "exp"))
 
-
 ## ------------------------------------------------------------------------
 slice(object = stable_sl, 
       ranges = list("alpha" = log(seq(1.2, 1.9, by = 0.05)), 
@@ -203,5 +179,4 @@ slice(object = stable_sl,
       nsim = 1000, 
       multicore = TRUE,
       ncores = 2)
-
 
