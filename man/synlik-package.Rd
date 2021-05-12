@@ -32,7 +32,6 @@ Maintainer: Matteo Fasiolo <matteo.fasiolo@gmail.com>
 \references{
 Simon N Wood. Statistical inference for noisy nonlinear ecological dynamic systems. Nature, 466(7310):1102--1104, 2010.
 }
-\keyword{ Intractable Likelihood, Simulation-based inference. }
 \seealso{
 For some examples see the Vignettes (type \code{vignette("synlik")}).
 }
