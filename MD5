@@ -1,4 +1,4 @@
-8cfbed3c6f8361585fcb8702e6bbc429 *DESCRIPTION
+9d718e4ca2a53b79c2877e5bfcfe2bf1 *DESCRIPTION
 5eb79bd4af1b63dde028e4ecdf9cbe88 *NAMESPACE
 d7b3ca52cb30d8630c58d1f153f478d2 *NEWS
 893821041bae673b902be30fb2130674 *R/Class_definitions.R
@@ -45,7 +45,7 @@ be6d9dd084fdf51f9d154cbb042c9765 *R/slik.R
 528a6f5b1c0b55adbeba009307fa90c5 *R/summary_statistics.R
 7d804136d37249053bf6a7c48d7b67c0 *README.md
 a81dbd25595eb7bd112133dc140f5af2 *TODO
-e06e166ba26c6de7bad2a03892936550 *build/vignette.rds
+7a5f949e0283935fcf23c96ef12f3567 *build/vignette.rds
 369acbdff7df8ce148df7d00295ced09 *data/bf1.rda
 b592b315f911590e3029a0caa2390722 *data/bf2.rda
 d40e02b5da4e04514aa0579b1b7f5189 *data/bf3.rda
@@ -54,9 +54,9 @@ fe08172b04152571357a026838cee921 *data/blow_sl.RData
 320f7be725fbfb32ea656801ad05b16a *data/ricker_sl.RData
 80f2d2a270d8ecab30e91e879114da3a *data/ricker_smcmc.RData
 3395c470f2587c20831d933616c660d3 *inst/CITATION
-deb80f160630b60f22a63c69334eca1e *inst/doc/synlik.R
-ecfd4dda56a35a09672db803cf6c009f *inst/doc/synlik.Rmd
-6f253908cf2836d6ba25bf554f931474 *inst/doc/synlik.html
+1130262427f89ecbe4d3fdb27144e32a *inst/doc/synlik.R
+fd752a584f798642a5ea7d86a0092794 *inst/doc/synlik.Rmd
+70c2723dcdc89341a4c046e08313a6d1 *inst/doc/synlik.html
 cc8c3818f8bbe6fde41768f40abefc48 *man/ANYOrNULL-class.Rd
 4bbe83480ecb48295a342dfb5af92eab *man/bf.Rd
 8627486676974f47bf33a6222578066b *man/blowSimul.Rd
@@ -94,4 +94,4 @@ dfc0584f6f9fb7c6df5793ac964ed536 *src/nlar.c
 5e0ee02cc17e2cd2ca60dd7ade3e3900 *src/simple_simulators.cpp
 a4289e95b6be2d915935d760a9dd4f39 *src/summ_stats.h
 9cb0e35b95ee08ee061c0d41c8422bc6 *src/synlik.h
-ecfd4dda56a35a09672db803cf6c009f *vignettes/synlik.Rmd
+fd752a584f798642a5ea7d86a0092794 *vignettes/synlik.Rmd

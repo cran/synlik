@@ -221,7 +221,7 @@ stableSimul <- function(param, nsim, extraArgs, ...)
   if(abs(param[1] - 1) < 0.01) stop("alpha == 1 is not allowed")
     
   # Actual simulation
-  output <- rstable(nObs * nObs, alpha = param[1], beta = param[2], gamma = param[3], delta = param[4])
+  output <- rstable(nObs * nsim, alpha = param[1], beta = param[2], gamma = param[3], delta = param[4])
   
   return( matrix(output, nsim, nObs) )
 }
