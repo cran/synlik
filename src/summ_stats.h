@@ -1,3 +1,11 @@
+
+// USE_FC_LEN_T and FCONE needed when calling Fortran from C, see comment on top of mgcv.h in mgcv package
+#define USE_FC_LEN_T
+
+#ifndef FCONE
+#define FCONE
+#endif
+
 /* The data -> statistics routines */
 void slacf(double *acf,double *x,int *n,int *n_reps,int *max_lag,double *NAcode,int *correlation);
 void slnlar(double *beta, double *x,int *n,int *n_reps,int *n_terms,

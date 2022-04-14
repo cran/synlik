@@ -1,8 +1,8 @@
 Package: synlik
 Type: Package
 Title: Synthetic Likelihood Methods for Intractable Likelihoods
-Version: 0.1.4
-Date: 2021-05-22
+Version: 0.1.5
+Date: 2022-04-14
 Author: Matteo Fasiolo and Simon Wood
 Maintainer: Matteo Fasiolo <matteo.fasiolo@gmail.com>
 Description: Framework to perform synthetic likelihood inference
@@ -17,6 +17,6 @@ LinkingTo: Rcpp, RcppArmadillo
 VignetteBuilder: knitr
 RoxygenNote: 5.0.1
 NeedsCompilation: yes
-Packaged: 2021-05-24 16:48:08 UTC; mf15002
+Packaged: 2022-04-14 12:09:08 UTC; teo
 Repository: CRAN
-Date/Publication: 2021-05-25 11:20:02 UTC
+Date/Publication: 2022-04-14 14:00:05 UTC
