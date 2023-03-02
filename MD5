@@ -1,4 +1,4 @@
-97d193d74de7abb4e85d8f9df4076f14 *DESCRIPTION
+95e96ac07e92ba5eb5e256824ee4c885 *DESCRIPTION
 5eb79bd4af1b63dde028e4ecdf9cbe88 *NAMESPACE
 d7b3ca52cb30d8630c58d1f153f478d2 *NEWS
 893821041bae673b902be30fb2130674 *R/Class_definitions.R
@@ -31,7 +31,7 @@ dd1f3f0a592eef3bcf4e31619f536cd2 *R/continue_smcmc.R
 3a6208d062f9381060d212e66e986658 *R/ctrlSetup.R
 130e4f8bf24de8d9cdc9cde0bf2cd5ca *R/extractCorr.R
 2df50c4ea71229a8f391a01fb348888c *R/internal_docs.R
-02088c2e7e489fec4c85333a84549a50 *R/on_load.R
+de4d39872e02084934149f8631b44486 *R/on_load.R
 1b8888741faefe2992b538064324dff1 *R/paramsSimulator.R
 ccdef68c1961d3cdaf3db3b717913a01 *R/plot_smcmc.R
 500bf9e894fb95280a5c7f8b6849e11c *R/plot_synlik.R
@@ -45,7 +45,7 @@ be6d9dd084fdf51f9d154cbb042c9765 *R/slik.R
 528a6f5b1c0b55adbeba009307fa90c5 *R/summary_statistics.R
 7d804136d37249053bf6a7c48d7b67c0 *README.md
 a81dbd25595eb7bd112133dc140f5af2 *TODO
-9f1c47f2ba51ccb2c196fe35995dd22f *build/vignette.rds
+bd087dc6986bd60414eeab0bfb4e9297 *build/vignette.rds
 369acbdff7df8ce148df7d00295ced09 *data/bf1.rda
 b592b315f911590e3029a0caa2390722 *data/bf2.rda
 d40e02b5da4e04514aa0579b1b7f5189 *data/bf3.rda
@@ -53,10 +53,10 @@ fe08172b04152571357a026838cee921 *data/blow_sl.RData
 64944f5fbbc2d81b31ad40f66ad0a025 *data/blow_smcmc.RData
 320f7be725fbfb32ea656801ad05b16a *data/ricker_sl.RData
 80f2d2a270d8ecab30e91e879114da3a *data/ricker_smcmc.RData
-3395c470f2587c20831d933616c660d3 *inst/CITATION
+08605598b9d18a57f8430fcbdd58593d *inst/CITATION
 1130262427f89ecbe4d3fdb27144e32a *inst/doc/synlik.R
 fd752a584f798642a5ea7d86a0092794 *inst/doc/synlik.Rmd
-a9849238a28d356c53a40a7ba7c01f79 *inst/doc/synlik.html
+2863c6eaa180f2d88ff256925dce7c7a *inst/doc/synlik.html
 cc8c3818f8bbe6fde41768f40abefc48 *man/ANYOrNULL-class.Rd
 4bbe83480ecb48295a342dfb5af92eab *man/bf.Rd
 8627486676974f47bf33a6222578066b *man/blowSimul.Rd
