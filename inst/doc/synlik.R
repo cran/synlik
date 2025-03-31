@@ -28,7 +28,7 @@ ricker_sl@extraArgs$obsData <- ricker_sl@data
 tmp <- simulate(ricker_sl, nsim = 2, stats = TRUE)
 tmp
 
-## ---- results='hide'----------------------------------------------------------
+## ----results='hide'-----------------------------------------------------------
 checkNorm(ricker_sl)
 
 ## ----ricker_slik--------------------------------------------------------------

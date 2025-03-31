@@ -6,11 +6,6 @@
    unpivoted case is testable.
 */
 #include "summ_stats.h"
-#include <stdlib.h>
-#include <math.h>
-#include <R.h>
-#include <R_ext/Linpack.h>
-#include <R_ext/Lapack.h>
 /*#include <dmalloc.h>*/
 
 void mgcv_chol(double *a,int *pivot,int *n,int *rank)

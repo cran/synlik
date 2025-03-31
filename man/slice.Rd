@@ -25,7 +25,7 @@ by default.}
 \item{draw}{If \code{TRUE} the slice will be plotted.}
 
 \item{trans}{Named vector or list of transformations to be applied to the parameters in \code{parName} 
-before plotting {ex: \code{trans = c(s = "exp", d = "exp")}}/}
+before plotting (ex: \code{trans = c(s = "exp", d = "exp")})}
 
 \item{multicore}{If \code{TRUE} the \code{object@simulator} and \code{object@summaries} functions will
 be executed in parallel. That is the \code{nsim} simulations will be divided in multiple cores.}
